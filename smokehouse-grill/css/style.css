@@ -1,0 +1,47 @@
+/* Ember & Oak Smokehouse Custom Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Active Nav Indicator */
+nav a.active {
+  background-color: #2d2928 !important;
+  color: #ffb59d !important;
+  font-weight: 600 !important;
+  border-radius: 0.25rem;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #161312;
+}
+::-webkit-scrollbar-thumb {
+  background: #383433;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5e1e;
+}
+
+/* Notification Toast */
+.smokehouse-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #ff5e1e;
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  box-shadow: 0 10px 30px rgba(255, 94, 30, 0.4);
+  z-index: 9999;
+  transform: translateY(120%);
+  transition: transform 0.3s ease;
+}
+.smokehouse-toast.show {
+  transform: translateY(0);
+}

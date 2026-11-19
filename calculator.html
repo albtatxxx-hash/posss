@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>حاسبة التبرع والكفالة | نبض الأمل</title>
+  
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-tertiary-container": "#fffbff",
+            "primary-fixed": "#89f5e7",
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#e4e2de",
+            "secondary": "#855300",
+            "surface-container-lowest": "#ffffff",
+            "inverse-surface": "#30312e",
+            "on-primary-fixed-variant": "#005049",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed-variant": "#92002a",
+            "surface-bright": "#fbf9f5",
+            "outline": "#6d7a77",
+            "tertiary-fixed-dim": "#ffb2b7",
+            "on-primary": "#ffffff",
+            "on-secondary-fixed": "#2a1700",
+            "surface-variant": "#e4e2de",
+            "inverse-on-surface": "#f2f0ed",
+            "outline-variant": "#bcc9c6",
+            "surface-container-low": "#f5f3ef",
+            "tertiary-container": "#dc2c4f",
+            "on-surface-variant": "#3d4947",
+            "secondary-container": "#fea619",
+            "on-tertiary": "#ffffff",
+            "background": "#fbf9f5",
+            "tertiary-fixed": "#ffdadb",
+            "on-background": "#1b1c1a",
+            "primary-container": "#008378",
+            "on-error": "#ffffff",
+            "surface-tint": "#006a61",
+            "surface-container-high": "#eae8e4",
+            "surface-container": "#efeeea",
+            "surface-dim": "#dbdad6",
+            "inverse-primary": "#6bd8cb",
+            "tertiary": "#b90538",
+            "secondary-fixed-dim": "#ffb95f",
+            "on-primary-container": "#f4fffc",
+            "surface": "#fbf9f5",
+            "secondary-fixed": "#ffddb8",
+            "on-tertiary-fixed": "#40000d",
+            "primary-fixed-dim": "#6bd8cb",
+            "on-surface": "#1b1c1a",
+            "on-secondary-container": "#684000",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed-variant": "#653e00",
+            "error": "#ba1a1a",
+            "primary": "#00685f",
+            "on-primary-fixed": "#00201d"
+          },
+          fontFamily: {
+            "headline-lg": ["Readex Pro"],
+            "headline-md": ["Readex Pro"],
+            "body-lg": ["Readex Pro"],
+            "headline-sm": ["Readex Pro"],
+            "label-lg": ["Readex Pro"],
+            "body-sm": ["Readex Pro"],
+            "body-md": ["Readex Pro"],
+            "label-md": ["Readex Pro"],
+            "label-sm": ["Readex Pro"],
+            "display-hero": ["Readex Pro"]
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+
+  <!-- ================= HEADER & NAVIGATION ================= -->
+  <header class="fixed top-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(28,25,23,0.05)]">
+    <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-full bg-secondary-fixed flex items-center justify-center text-primary shadow-[0_2px_8px_rgba(254,166,25,0.2)] group-hover:scale-105 transition-transform">
+          <span class="material-symbols-outlined text-[26px]">favorite</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm text-primary tracking-tight">نبض الأمل</span>
+          <span class="font-label-sm text-label-sm text-secondary font-medium">لأطفال الغسيل الكلوي</span>
+        </div>
+      </a>
+
+      <nav id="mainNav" class="hidden xl:flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-full">
+        <a href="index.html" class="nav-link px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all" data-page="home">الرئيسية</a>
+        <a href="heroes.html" class="nav-link px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all" data-page="heroes-stories">قصص وأحلام الأبطال</a>
+        <a href="calculator.html" class="nav-link px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all active" data-page="donation-calculator">حاسبة التبرع والكفالة</a>
+        <a href="partners.html" class="nav-link px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all" data-page="partners-and-hospitals">شراكات ومستشفيات</a>
+        <a href="about.html" class="nav-link px-4 py-2 rounded-full font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-all" data-page="about-initiative">عن المبادرة</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="donate.html" class="inline-flex items-center gap-2 bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container px-5 py-2.5 rounded-full font-label-lg text-label-lg font-bold shadow-[0_4px_16px_rgba(254,166,25,0.3)] transition-all hover:scale-105 active:scale-95">
+          <span>تبرّع الآن</span>
+          <span class="material-symbols-outlined text-[20px]">volunteer_activism</span>
+        </a>
+        <button id="mobileMenuBtn" type="button" class="xl:hidden p-2.5 rounded-xl bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors" aria-label="فتح القائمة">
+          <span class="material-symbols-outlined text-[26px]">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-inverse-surface/50 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300 xl:hidden">
+      <div class="absolute top-0 right-0 w-80 max-w-[85vw] h-full bg-surface-container-lowest p-6 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300">
+        <div class="flex flex-col gap-6">
+          <div class="flex items-center justify-between pb-4 border-b border-surface-container-high">
+            <div class="flex items-center gap-2.5">
+              <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined text-[22px]">favorite</span>
+              </div>
+              <span class="font-headline-sm text-[18px] text-primary font-bold">نبض الأمل</span>
+            </div>
+            <button id="closeMobileMenuBtn" type="button" class="p-2 rounded-full hover:bg-surface-container text-on-surface-variant">
+              <span class="material-symbols-outlined">close</span>
+            </button>
+          </div>
+          <nav class="flex flex-col gap-2">
+            <a href="index.html" class="mobile-nav-link p-3 rounded-xl font-label-lg text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-all" data-page="home">الرئيسية</a>
+            <a href="heroes.html" class="mobile-nav-link p-3 rounded-xl font-label-lg text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-all" data-page="heroes-stories">قصص وأحلام الأبطال</a>
+            <a href="calculator.html" class="mobile-nav-link p-3 rounded-xl font-label-lg text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-all active" data-page="donation-calculator">حاسبة التبرع والكفالة</a>
+            <a href="partners.html" class="mobile-nav-link p-3 rounded-xl font-label-lg text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-all" data-page="partners-and-hospitals">شراكات ومستشفيات</a>
+            <a href="about.html" class="mobile-nav-link p-3 rounded-xl font-label-lg text-on-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-all" data-page="about-initiative">عن المبادرة</a>
+          </nav>
+        </div>
+        <div class="pt-6 border-t border-surface-container-high">
+          <a href="donate.html" class="w-full py-3.5 rounded-xl bg-secondary-container text-on-secondary-container font-bold text-center shadow-md flex items-center justify-center gap-2">
+            <span>تبرّع الآن</span>
+            <span class="material-symbols-outlined text-[20px]">volunteer_activism</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="w-full pt-28 pb-20 bg-surface min-h-screen">
+    <div class="max-w-5xl mx-auto px-6 lg:px-12 flex flex-col gap-10">
+      
+      <div class="text-center flex flex-col gap-3">
+        <span class="font-label-lg text-label-lg text-primary font-semibold">حاسبة الأثر الإنساني الحي</span>
+        <h1 class="font-headline-lg text-display-hero text-on-surface font-bold">
+          شاهد بأم عينك ما يفعله عطاؤك في حياة طفل 🧮
+        </h1>
+        <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+          حرّك المؤشر وحدد المبلغ الذي يناسبك لترى النتيجة الطبية والنفسية المباشرة التي تتحقق للطفل في جلسته القادمة مباشرة.
+        </p>
+      </div>
+
+      <!-- Main Interactive Box -->
+      <div class="bg-surface-container-lowest p-8 lg:p-12 rounded-3xl shadow-xl flex flex-col gap-10 border border-surface-container-high">
+        
+        <!-- Preset Quick Value Buttons -->
+        <div class="flex flex-col gap-2">
+          <span class="font-label-sm text-on-surface font-semibold">اختيارات سريعة شائعة:</span>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <button onclick="document.getElementById('impactSlider').value = 100; updateImpact(100);" class="py-2.5 rounded-xl bg-surface-container-low hover:bg-primary-fixed/30 font-bold text-on-surface transition-all" type="button">100 ر.س</button>
+            <button onclick="document.getElementById('impactSlider').value = 250; updateImpact(250);" class="py-2.5 rounded-xl bg-primary-fixed/40 border border-primary font-bold text-primary transition-all" type="button">250 ر.س (جلسة)</button>
+            <button onclick="document.getElementById('impactSlider').value = 500; updateImpact(500);" class="py-2.5 rounded-xl bg-surface-container-low hover:bg-primary-fixed/30 font-bold text-on-surface transition-all" type="button">500 ر.س (جلستان)</button>
+            <button onclick="document.getElementById('impactSlider').value = 1000; updateImpact(1000);" class="py-2.5 rounded-xl bg-surface-container-low hover:bg-primary-fixed/30 font-bold text-on-surface transition-all" type="button">1,000 ر.س (شهرية)</button>
+          </div>
+        </div>
+
+        <!-- Slider Section -->
+        <div class="flex flex-col gap-4 pt-4 border-t border-surface-container-high">
+          <div class="flex items-center justify-between">
+            <span class="font-label-md text-label-md text-on-surface-variant font-medium">قيمة مساهمتك الكريمة:</span>
+            <span id="sliderValueText" class="font-display-hero text-headline-lg text-primary font-bold">250 ر.س</span>
+          </div>
+          <input id="impactSlider" type="range" min="50" max="2500" step="50" value="250" class="w-full accent-primary"/>
+          <div class="flex justify-between text-outline font-label-sm text-label-sm">
+            <span>50 ر.س (دعم رمزي)</span>
+            <span>500 ر.س (رعاية مكثفة)</span>
+            <span>1,000 ر.س</span>
+            <span>2,500 ر.س (كفالة شاملة)</span>
+          </div>
+        </div>
+
+        <!-- Dynamic Impact Display Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+          <div class="p-6 rounded-2xl bg-surface-container-low flex flex-col gap-3 card-hover border border-surface-container-high">
+            <div class="w-12 h-12 rounded-2xl bg-secondary/15 text-secondary flex items-center justify-center">
+              <span class="material-symbols-outlined text-[26px]">water_bottle</span>
+            </div>
+            <span class="font-label-lg text-label-lg text-on-surface font-bold">المستلزمات الطبية والفلاتر</span>
+            <p id="impactMedical" class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              تغطية تكاليف الفلتر والأنابيب المعقمة لجلسة غسيل واحدة منقذة لحياة طفل.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-container-low flex flex-col gap-3 card-hover border border-surface-container-high">
+            <div class="w-12 h-12 rounded-2xl bg-primary/15 text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined text-[26px]">child_care</span>
+            </div>
+            <span class="font-label-lg text-label-lg text-on-surface font-bold">الدعم النفسي والترفيهي</span>
+            <p id="impactPsych" class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              توفير حقيبة ألعاب ذكاء وكراسة رسم تزيل ملل وخوف الساعات الـ 4 المقيدة بالسرير.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-surface-container-low flex flex-col gap-3 card-hover border border-surface-container-high">
+            <div class="w-12 h-12 rounded-2xl bg-tertiary/15 text-tertiary flex items-center justify-center">
+              <span class="material-symbols-outlined text-[26px]">nutrition</span>
+            </div>
+            <span class="font-label-lg text-label-lg text-on-surface font-bold">مكملات غذائية خاصة</span>
+            <p id="impactNutrition" class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              تأمين حليب بروتيني خالي من الفوسفور والبوتاسيوم المناسب لحمية الغسيل الكلوي لأسبوعين.
+            </p>
+          </div>
+        </div>
+
+        <!-- Calculated Action CTA -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 bg-surface-container-low/60 p-6 rounded-2xl">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary text-[28px]">thumb_up</span>
+            <span class="font-label-lg text-label-lg text-on-surface font-bold">
+              بهذا المبلغ تصنع فارقاً حقيقياً يبدأ من الجلسة القادمة مباشرة!
+            </span>
+          </div>
+          <button onclick="openDonationModal('حاسبة الأثر الإنساني', document.getElementById('impactSlider').value)" type="button" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container font-label-lg text-label-lg font-bold shadow-md transition-transform hover:scale-105 active:scale-95 shrink-0">
+            اعتماد هذا التبرع الآن
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="w-full bg-surface-container-low mt-space-xl">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12">
+        <div class="lg:col-span-4 flex flex-col gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-primary">
+              <span class="material-symbols-outlined text-[22px]">favorite</span>
+            </div>
+            <span class="font-headline-sm text-headline-sm text-primary">نبض الأمل</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            منصة إنسانية رقمية متخصصة في كفالة جلسات الغسيل الكلوي ورعاية الأطفال المحاربين في المشافي المعتمدة.
+          </p>
+        </div>
+        <div class="lg:col-span-3 flex flex-col gap-3">
+          <span class="font-headline-sm text-[18px] text-on-surface font-bold mb-1">صفحات المنصة</span>
+          <ul class="flex flex-col gap-2.5">
+            <li><a href="index.html" class="text-on-surface-variant hover:text-primary transition-colors font-body-sm">الرئيسية</a></li>
+            <li><a href="heroes.html" class="text-on-surface-variant hover:text-primary transition-colors font-body-sm">قصص وأحلام الأبطال</a></li>
+            <li><a href="calculator.html" class="text-primary font-bold font-body-sm">حاسبة التبرع والكفالة</a></li>
+            <li><a href="partners.html" class="text-on-surface-variant hover:text-primary transition-colors font-body-sm">شراكات ومستشفيات</a></li>
+            <li><a href="about.html" class="text-on-surface-variant hover:text-primary transition-colors font-body-sm">عن المبادرة</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-5 flex flex-col gap-4">
+          <span class="font-headline-sm text-[18px] text-on-surface font-bold">كفالة عاجلة فورية</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">يمكنك الآن كفالة جلسة فورية لطفل في قائمة الانتظار بضغطة زر واحدة.</p>
+          <div>
+            <a href="donate.html" class="inline-flex items-center gap-2 bg-secondary-container hover:bg-secondary-fixed text-on-secondary-container px-6 py-3 rounded-full font-bold shadow-md">
+              <span>التبرع الفوري السريع</span>
+              <span class="material-symbols-outlined">volunteer_activism</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-surface-container-high text-center">
+        <span class="font-body-sm text-on-surface-variant">جميع الحقوق محفوظة © 2025 مبادرة نبض الأمل لأطفال الغسيل الكلوي.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/firebase.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
